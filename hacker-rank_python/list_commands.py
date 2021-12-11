@@ -29,7 +29,8 @@ for command in list:
     if command[0] == "sort":
         new_list.sort()
     if command[0] == "pop":
-        new_list.pop()
+        if len(new_list) != 0:
+            new_list.pop()
     if command[0] == "reverse":
         new_list.reverse()
         
