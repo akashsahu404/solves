@@ -12,27 +12,25 @@
 
 
 N = int(input())
+
+command = []
 list = []
 for i in range(N):
-    command_list = input()
-    list.append(command_list.split())
-new_list = []
-for command in list:
+    command = input().split()
     if command[0] == "insert":
-        new_list.insert(int(command[1]), int(command[2]))
-    if command[0] == "print":
-        print(new_list)
-    if command[0] == "remove":
-        new_list.remove(int(command[1]))
-    if command[0] == "append":
-        new_list.append(int(command[1]))
-    if command[0] == "sort":
-        new_list.sort()
-    if command[0] == "pop":
-        if len(new_list) != 0:
-            new_list.pop()
-    if command[0] == "reverse":
-        new_list.reverse()
+        list.insert(int(command[1]), int(command[2]))
+    elif command[0] == "append":
+        list.append(int(command[1]))
+    elif command[0] == "sort":
+        list.sort()
+    elif command[0] == "remove":
+        list.remove(int(command[1]))
+    elif command[0] == "pop":
+        list.pop()
+    elif command[0] == "reverse":
+        list.reverse()
+    else:
+        print(list)
         
         
         
